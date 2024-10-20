@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "Action Movies",
+                        "Action ",
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w500,

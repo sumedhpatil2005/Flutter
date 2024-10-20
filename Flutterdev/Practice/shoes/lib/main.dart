@@ -31,9 +31,12 @@ class _shoesState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Shoes "), actions: const [
-          Icon(Icons.shopping_cart),
-        ]),
+        appBar: AppBar(
+            title: const Text("Shoes ",
+                style: TextStyle(fontWeight: FontWeight.bold)),
+            actions: const [
+              Icon(Icons.shopping_cart),
+            ]),
         body: Column(children: [
           Container(
             alignment: Alignment.topCenter,
@@ -50,7 +53,6 @@ class _shoesState extends State {
               alignment: Alignment.topLeft,
               child: const Text("Nike Air Force 1'07",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold))),
-
           Container(
               child: Row(children: [
             const Padding(padding: EdgeInsets.all(5)),
@@ -85,14 +87,35 @@ class _shoesState extends State {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             const SizedBox(width: 10),
             const Icon(Icons.remove),
+            SizedBox(width: 5),
             Container(
                 height: 20,
                 width: 20,
                 decoration: BoxDecoration(border: Border.all(width: 1)),
-                child: Text("2")),
+                child: Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: Text("2"),
+                )),
+            SizedBox(width: 5),
+            const Icon(Icons.add),
           ])),
+          SizedBox(height: 10),
+          SizedBox(
+            height: 40,
+            width: 250,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                "Purchase",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              style: ButtonStyle(
+                  backgroundColor:
+                      WidgetStatePropertyAll(Color.fromARGB(255, 85, 39, 164))),
 
-          //
+              //
+            ),
+          )
         ]));
   }
 }
